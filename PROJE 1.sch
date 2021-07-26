@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R4
+U 1 1 60E424A5
+P 7550 2850
+F 0 "R4" H 7620 2896 50  0000 L CNN
+F 1 "470" H 7620 2805 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7480 2850 50  0001 C CNN
+F 3 "~" H 7550 2850 50  0001 C CNN
+	1    7550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60E42C42
+P 6950 2850
+F 0 "R3" H 7020 2896 50  0000 L CNN
+F 1 "10k" H 7020 2805 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6880 2850 50  0001 C CNN
+F 3 "~" H 6950 2850 50  0001 C CNN
+	1    6950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60E433A8
+P 6450 2850
+F 0 "R2" H 6520 2896 50  0000 L CNN
+F 1 "10k" H 6520 2805 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6380 2850 50  0001 C CNN
+F 3 "~" H 6450 2850 50  0001 C CNN
+	1    6450 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60E43D38
+P 5650 2850
+F 0 "R1" H 5720 2896 50  0000 L CNN
+F 1 "470" H 5720 2805 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5580 2850 50  0001 C CNN
+F 3 "~" H 5650 2850 50  0001 C CNN
+	1    5650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 60E44621
+P 7550 3500
+F 0 "D2" H 7543 3717 50  0000 C CNN
+F 1 "LED" H 7543 3626 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_IRBlack" H 7550 3500 50  0001 C CNN
+F 3 "~" H 7550 3500 50  0001 C CNN
+	1    7550 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 60E483E4
+P 5650 3450
+F 0 "D1" H 5643 3667 50  0000 C CNN
+F 1 "LED" H 5643 3576 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 5650 3450 50  0001 C CNN
+F 3 "~" H 5650 3450 50  0001 C CNN
+	1    5650 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Battery DC1
+U 1 1 60E4E3FE
+P 8500 3650
+F 0 "DC1" H 8608 3696 50  0000 L CNN
+F 1 "9V" H 8608 3605 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal" V 8500 3710 50  0001 C CNN
+F 3 "~" V 8500 3710 50  0001 C CNN
+	1    8500 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2700 5650 2600
+Wire Wire Line
+	6450 2600 6450 2700
+Wire Wire Line
+	7550 2700 7550 2600
+Wire Wire Line
+	6950 2700 6950 2600
+Wire Wire Line
+	7550 3350 7550 3000
+Wire Wire Line
+	5650 3300 5650 3000
+Wire Wire Line
+	7100 4000 6600 4000
+Wire Wire Line
+	6600 4000 6600 4800
+Wire Wire Line
+	6600 4800 6450 4800
+Wire Wire Line
+	6400 4700 6950 4700
+Wire Wire Line
+	6950 4700 6950 4800
+Wire Wire Line
+	6400 4000 6400 4700
+Wire Wire Line
+	7550 4600 7250 4600
+Wire Wire Line
+	5700 5350 5700 5000
+Wire Wire Line
+	7250 5000 7250 5350
+Wire Wire Line
+	7250 5350 5700 5350
+Connection ~ 6950 2600
+Wire Wire Line
+	6950 2600 7550 2600
+Connection ~ 6450 2600
+Wire Wire Line
+	6450 2600 6950 2600
+Wire Wire Line
+	5650 2600 6450 2600
+Wire Wire Line
+	6450 3000 6450 4800
+Connection ~ 6450 4800
+Wire Wire Line
+	6950 3000 6950 4700
+Connection ~ 6950 4700
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 60E62C02
+P 7150 4800
+F 0 "Q2" H 7341 4846 50  0000 L CNN
+F 1 "BC547" H 7341 4755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7350 4725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 7150 4800 50  0001 L CNN
+	1    7150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 60E6587E
+P 5750 4800
+F 0 "Q1" H 5941 4846 50  0000 L CNN
+F 1 "BC547" H 5941 4755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5950 4725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 5750 4800 50  0001 L CNN
+	1    5750 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 3450 8500 2700
+Text Label 8500 3000 1    50   ~ 0
+PİL_ARTI
+Text Label 7250 2600 0    50   ~ 0
+PİL_ARTI
+Wire Wire Line
+	7550 3650 7550 4000
+Text Label 6900 5350 0    50   ~ 0
+PİL_ARTI
+Wire Wire Line
+	8500 3850 8500 4400
+Text Label 8500 4350 1    50   ~ 0
+PİL_ARTI
+$Comp
+L Device:CP C1
+U 1 1 60E84D18
+P 6050 4000
+F 0 "C1" H 6168 4046 50  0000 L CNN
+F 1 "CP" H 6168 3955 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm" H 6088 3850 50  0001 C CNN
+F 3 "~" H 6050 4000 50  0001 C CNN
+	1    6050 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 60E86891
+P 7250 4000
+F 0 "C2" H 7368 4046 50  0000 L CNN
+F 1 "CP" H 7368 3955 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm" H 7288 3850 50  0001 C CNN
+F 3 "~" H 7250 4000 50  0001 C CNN
+	1    7250 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 4000 7550 4000
+Connection ~ 7550 4000
+Wire Wire Line
+	7550 4000 7550 4600
+Wire Wire Line
+	6200 4000 6400 4000
+Wire Wire Line
+	5900 4000 5650 4000
+Wire Wire Line
+	5650 3600 5650 4000
+Connection ~ 5650 4000
+Wire Wire Line
+	5950 4800 6450 4800
+Wire Wire Line
+	5700 5000 5650 5000
+Wire Wire Line
+	5650 4000 5650 4600
+$EndSCHEMATC
